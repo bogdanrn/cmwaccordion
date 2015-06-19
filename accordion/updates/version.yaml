@@ -1,0 +1,15 @@
+1.0.1:
+- First version of Accordion
+
+1.0.2:
+- created tables
+- create_accordions_table.php  
+- create_accordion_reviews_table.php
+
+1.0.3:
+- create ad
+- create_accordion_ads_table.php
+
+1.0.4:
+- create lpe
+- create_accordion_l_p_es_table.php

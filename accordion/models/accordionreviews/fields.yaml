@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    order:
+        label: Order
+        type: number
+    name:
+        label: Name
+        type: text
+    description:
+        label: Description
+        type: textarea
+    picture:
+        label: Image
+        type: fileupload
+        mode: image
+    rating:
+        label: Rating
+        type: dropdown
+        options:
+            0: 0
+            1: 1
+            2: 2
+            3: 3
+            4: 4
+            5: 5

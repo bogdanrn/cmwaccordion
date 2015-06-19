@@ -1,0 +1,45 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    order:
+        label: Order
+        type: Number
+    pictures:
+        label: Image
+        type: fileupload
+        mode: image
+    title:
+        label: Title
+        type: Text
+    description:
+        label: Description
+        type: Textarea
+    button_enabled:
+        label: Call to action
+        type: checkbox
+        default: true
+        comment: Flick this switch to display call to action button  
+    button_label:
+        label: Button Label
+        type: Text
+    button_link:
+        label: Button Link
+        type: Text
+    created_at:
+          label: Date of creation
+          disabled: true
+    slides:
+        tab: Slides
+        context: update
+        type: partial
+        path: @/plugins/cmw/accordion/controllers/accordionreviews/_list_reviews.htm
+    ads:
+        tab: Ads
+        context: update
+        type: partial
+        path: @/plugins/cmw/accordion/controllers/accordionad/_list_ads.htm

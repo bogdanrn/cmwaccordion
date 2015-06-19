@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Accordion Ad
+
+# Model Form Field configuration
+form: $/cmw/accordion/models/accordionad/fields.yaml
+
+# Model Class name
+modelClass: CMW\Accordion\Models\AccordionAd
+
+# Default redirect location
+defaultRedirect: cmw/accordion/accordionad
+
+# Create page
+create:
+    title: Create Accordion Ad
+    redirect: cmw/accordion/accordionad/update/:id
+    redirectClose: cmw/accordion/accordionad
+
+# Update page
+update:
+    title: Edit Accordion Ad
+    redirect: cmw/accordion/accordionad
+    redirectClose: cmw/accordion/accordionad
+
+# Preview page
+preview:
+    title: Preview Accordion Ad

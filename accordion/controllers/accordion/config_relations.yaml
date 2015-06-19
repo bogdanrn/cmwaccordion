@@ -1,0 +1,26 @@
+accordionreviews: 
+    label: Accordion Reviews
+    view:
+        list: $/cmw/accordion/models/accordionreviews/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/cmw/accordion/models/accordionreviews/fields.yaml
+        recordsPerPage: 10
+
+accordionads: 
+    label: Accordion Ads
+    view:
+        list: $/cmw/accordion/models/accordionad/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/cmw/accordion/models/accordionad/fields.yaml
+        recordsPerPage: 10
+
+accordionlpe: 
+    label: Accordion LPE
+    view:
+        list: $/cmw/accordion/models/accordionlpe/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/cmw/accordion/models/accordionlpe/fields.yaml
+        recordsPerPage: 10

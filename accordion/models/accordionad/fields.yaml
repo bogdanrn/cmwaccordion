@@ -1,0 +1,29 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    button_enabled:
+        label: Call to action
+        type: checkbox
+        default: true
+        comment: Flick this switch to display the ad  
+    order:
+        label: Order
+        type: number
+    title:
+        label: Title
+        type: text
+    description:
+        label: Description
+        type: textarea
+    picture:
+        label: Image
+        type: fileupload
+        mode: image      
+    lpe:
+        tab: lpe
+        context: update
+        type: partial
+        path: @/plugins/cmw/accordion/controllers/accordionlpe/_list_lpe.htm
+

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Accordion Review
+
+# Model Form Field configuration
+form: $/cmw/accordion/models/accordionreview/fields.yaml
+
+# Model Class name
+modelClass: CMW\Accordion\Models\AccordionReview
+
+# Default redirect location
+defaultRedirect: cmw/accordion/accordionreviews
+
+# Create page
+create:
+    title: Create Accordion Review
+    redirect: cmw/accordion/accordionreviews/update/:id
+    redirectClose: cmw/accordion/accordionreviews
+
+# Update page
+update:
+    title: Edit Accordion Review
+    redirect: cmw/accordion/accordionreviews
+    redirectClose: cmw/accordion/accordionreviews
+
+# Preview page
+preview:
+    title: Preview Accordion Review

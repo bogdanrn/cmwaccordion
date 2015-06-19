@@ -1,0 +1,103 @@
+<div class="column">
+
+    <div class="ui inverted segment">
+
+        <div class="ui inverted accordion">
+
+            {% for accordionP in __SELF__.accordions %}
+
+                <div class="{% if loop.first %} active {% endif %} title wv_border accordion_{{ accordionP.id }}">
+
+                    <div class="wv_centered"> {{ accordionP.title }}
+
+                        <i class="plus minus icon"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="{% if loop.first %} active {% endif %} ui grid content wv_content">
+
+                    <div class="ten wide column padding_desktop1">
+
+                        <p>{{ accordionP.description }}</p>
+
+                        {% if accordionP.button_enabled %}
+
+                            <a target="_blank" href="{{ accordionP.button_link }}" class="ui secondary button">{{ accordionP.button_label }}</a>
+
+                        {% endif %}
+
+                        {% for accordionA in accordionP.accordionads %}
+
+                            {% if accordionA.button_enabled %}
+
+                                <div class="ui grid two column stackable">
+
+                                    <div class="column">
+
+                                        <img class="ui image" src="{{ accordionA.picture.path }}">
+
+                                    </div>
+
+                                    <div class="column accordion_ad">
+
+                                        <h2>{{ accordionA.title }}</h2>
+
+                                        <p>{{ accordionA.description }}</p>
+
+                                        <p class="accordion_ad_info">
+
+                                            <a href="{{ accordionA.website_link }}" target="_blank">{{ accordionA.website_name }}</a><br>
+
+                                            <span>{{ accordionA.phone }}</span><br>
+
+                                            <a href="mailto:{{ accordionA.email }}" target="_top">{{ accordionA.email }}</a>
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            {% endif %}
+
+                        {% endfor %}
+
+                    </div>
+
+                    <div class="six wide column padding_desktop2">
+
+                        {% for image in accordionP.pictures %}
+
+                            <img class="ui image" src="{{ image.path }}">
+
+                        {% endfor %}
+
+                    </div>
+
+
+
+                    {% for accordionR in accordionP.accordionreviews %}
+
+                        <div class="four wide column padding_desktop1"><img class="ui small circular image" src="{{ accordionR.picture.path }}"></div>
+
+                        <div class="twelve wide column">
+
+                            <span><em>"{{ accordionR.description }}"</em></span><br>
+
+                            {% for value in 1..accordionR.rating %}<i class="icon rateview"></i>{% endfor %}{% for value in accordionR.rating..5 %}<i class="icon greyrateview"></i>{% endfor %}<span>By {{ accordionR.name }}</span>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>

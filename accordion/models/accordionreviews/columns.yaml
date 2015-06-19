@@ -1,0 +1,12 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    order:
+        label: Order
+        searchable: true
+    name:
+        label: Name
+    rating:
+        label: Rating
